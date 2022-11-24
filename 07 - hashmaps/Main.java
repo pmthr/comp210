@@ -31,7 +31,9 @@ public class Main {
                         passwordManager.put(websiteName, password);
 
                         System.out.println("New password added");
+                        
                         break;
+                        
                     case "Get password":
                         websiteName = scanner.nextLine();
                         password = passwordManager.get(websiteName);
@@ -43,6 +45,7 @@ public class Main {
                         }
 
                         break;
+                        
                     case "Delete account":
                         websiteName = scanner.nextLine();
                         password = passwordManager.remove(websiteName);
@@ -54,6 +57,7 @@ public class Main {
                         }
 
                         break;
+                        
                     case "Check duplicate password":
                         password = scanner.nextLine();
                         
@@ -70,6 +74,7 @@ public class Main {
                         }
 
                         break;
+                        
                     case "Get accounts":
                         Set<String> accounts = passwordManager.keySet();
 
@@ -78,17 +83,22 @@ public class Main {
                         for (String account : accounts) {
                             System.out.println(account);
                         }
+                        
                         break;
+                        
                     case "Generate random password":
                         passwordLength = scanner.nextInt();
                         password = passwordManager.generateRandomPassword(passwordLength);
 
                         System.out.println(password);
                         scanner.nextLine();
+                        
                         break;
+                        
                     case "Exit":
                         masterInput = "";
                         break;
+                        
                     default:
                         System.out.println("Command not found");
                         break;
