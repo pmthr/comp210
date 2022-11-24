@@ -82,7 +82,7 @@ public class PasswordManager<K,V> implements Map<K,V> {
                 V password = account.getPassword();
 
                 if (previousAccount != null) {
-                    previousAccount.setNext(account.getNext()); // MIGHT THROW NULL ERROR
+                    previousAccount.setNext(account.getNext()); 
                 } else {
                     this._passwords[index] = null;
                 }
@@ -124,8 +124,8 @@ public class PasswordManager<K,V> implements Map<K,V> {
 
     @Override
     public String generateRandomPassword(int length) {
-        int leftLimit = 48; // numeral '0'
-        int rightLimit = 122; // letter 'z'
+        int leftLimit = 48;
+        int rightLimit = 122;
         int targetStringLength = length;
         Random random = new Random();
 
